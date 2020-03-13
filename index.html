@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Holiday Ventures - Salesforce Development, Technical Business Operations</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link rel="icon" type="image/png" href="images/hv-logo-text-gray-100.png"/>
+    <link rel="stylesheet" href="https://use.typekit.net/ile4azu.css">
+
+    <!-- === STYLES === -->
+    <style>
+
+      html {
+        font-family: nimbus-sans, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 14px;
+      }
+      @media(min-width: 800px) {
+        html {
+          font-size: 16px;
+        }
+      }
+
+      body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        color: #404040;
+        
+        background-color: #F4EDDB;
+      }
+      
+      h2 {
+        font-size: 1em;
+        color: #1B7340;
+      }
+
+      #overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        background-image: url(images/cubes-gold-1000.png);
+        background-color: #F4EDDB;
+        background-size: 350px;
+        opacity: 0.21;
+      }
+      #overlay::after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.53);
+        z-index: 2;
+      }
+
+      #container {
+        position: relative;
+        z-index: 10;
+
+        max-width: 824px;
+        margin: 0 auto;
+        padding: 24px 24px 100px 24px;
+        
+        font-size: 1.7rem;
+      }
+      @media(min-width: 1000px) {
+        #container {
+          padding-top: 100px;
+        }
+      }
+
+        #banner {
+          border-left: 10px solid #F40004;
+          margin: 0 0 36px -34px;
+          padding: 12px 0 12px 24px;
+          font-size: 2.5rem;
+        }
+          #logo img {
+            max-height: 150px;
+            margin-bottom: 8px;
+          }
+          #banner strong {
+            color: #F40004;
+          }
+
+        .body-section {
+          margin-top: 4rem;
+        }
+        .body-section.no-margin {
+          margin: 0;
+        }
+      
+      ul.body-list {
+        margin: 0;
+      }
+        ul.body-list > li {
+          margin-bottom: 0.5em;
+        }
+        ul.body-list > li:last-child {
+          margin-bottom: 0;
+        }
+      
+      ul.logo-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin: 0 -12px;
+        padding: 0;
+      }
+        ul.logo-list > li {
+          flex: 1 0 160px;
+          padding: 24px;
+          margin: 12px;
+
+          background: #FFFFFF;
+          border: 1px solid #EFEFEF;
+          border-radius: 9px;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        ul.logo-list > li > img {
+          max-width: 100%;
+          max-height: 50px;
+          object-fit: contain;
+          
+          filter: grayscale(1);
+          opacity: 80%;
+        }
+
+        /* #=== LOGO STYLE OVERRIDES ===# */
+
+        ul.logo-list > li > img.airware { opacity: 0.55; }
+        ul.logo-list > li > img.caterpillar { opacity: 0.47; }
+        ul.logo-list > li > img.govini {
+          filter: brightness(0.2) grayscale(1);
+          opacity: 0.70;
+        }
+        ul.logo-list > li > img.hpp { opacity: 0.85; }
+        ul.logo-list > li > img.picarro { opacity: 0.75; }
+        ul.logo-list > li > img.rpx { opacity: 0.75; }
+        ul.logo-list > li > img.skype { opacity: 0.90; }
+        ul.logo-list > li > img.ticketfly { opacity: 0.60; }
+        ul.logo-list > li > img.turo { opacity: 0.55; }
+        ul.logo-list > li > img.virta { opacity: 0.90; }
+      
+      /* #=== FOOTER ===# */
+
+      #footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+
+        color: #826523;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="overlay">&nbsp;</div>
+    
+    <div id="container">
+      
+      <div id="banner">
+        <div id="logo">
+          <img src="images/hv-logo-text-red-1000.png"/>
+        </div>
+        <strong>Holiday Ventures</strong> is a family-run boutique consulting firm based in San Francisco.
+      </div>
+      
+      <div class="body-section no-margin">
+        We primarily work with startups and growth-stage companies.
+      </div>
+      
+      <div class="body-section">
+        <h2>Specialties</h2>
+        <ul class="body-list">
+          <li>Architecting complex Salesforce implementations</li>
+          <li>Architecting multi-system business system integrations</li>
+          <li>Advanced build outs using Apex, Visualforce and Salesforce Lightning</li>
+        </ul>
+      </div>
+      
+      <div class="body-section">
+        <h2>Past Clients Include</h2>
+        
+        <ul class="logo-list">
+          <li><img class="virta" src="images/clients/virta-logo.png" alt="Virta Health"/></li>
+          <li><img class="ticketfly" src="images/clients/ticketfly-logo.png" alt="Ticketfly"/></li>
+          <li><img class="skype" src="images/clients/skype-logo.png" alt="Skype"/></li>
+          <li><img class="airware" src="images/clients/airware-logo.jpg" alt="Airware"/></li>
+          <li><img class="picarro" src="images/clients/picarro-logo.png" alt="Picarro"/></li>
+          <li><img class="hpp" src="images/clients/homeless-prenatal-program-logo.png" alt="Homeless Prenatal Program"/></li>
+          <li><img class="vocera" src="images/clients/vocera-logo.png" alt="Vocera"/></li>
+          <li><img class="caterpillar" src="images/clients/caterpillar-logo.png" alt="Caterpillar"/></li>
+          <li><img class="rpx" src="images/clients/rpx-logo.png" alt="RPX Corporation"/></li>
+          <li><img class="turo" src="images/clients/turo-logo.png" alt="Turo"/></li>
+          <li><img class="govini" src="images/clients/govini-logo.png" alt="Govini"/></li>
+          <li><img class="crr" src="images/clients/crr-global-logo.png" alt="CRR Global"/></li>
+        </ul>
+      </div>
+      
+      <div class="body-section">
+        <h2>Inquiries</h2>
+        
+        We primarily service our existing clients, but may be reached at <strong>contact@holiday.ventures</strong>.
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="inner">
+        &copy; 2020 Holiday Ventures, a California Corporation
+      </div>
+    </div>
+
+  </body>
+
+</html>
